@@ -1,6 +1,5 @@
 ## 记录web学习的笔记
 
-theme: Minima
 
 [test](test.md)
 
