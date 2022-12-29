@@ -1,3 +1,4 @@
+theme: Minima
 # 字体大小
 - text-xs
 - text-sm
