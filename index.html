@@ -16,14 +16,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="http://cdn.staticfile.org/moment.js/2.24.0/moment-with-locales.js"></script>
   </head>
   <body class="bg-gray-200 container mx-auto">
-    <a href="docs/test.md">test.md</a>
-    <a href="docs/字符串，数组，对象原型放法.md">字符串，数组，对象原型放法.md</a>
-    <a href="docs/常用.md">常用.md</a>
-    <a href="docs/常用css.md">常用css.md</a>
+    <ul class="link">
+      <li>test.md</li>
+      <li>字符串，数组，对象原型放法.md</li>
+      <li>常用.md</li>
+      <li>常用css.md</li>
+    </ul>
+    <main><zero-md src="/example.md"></zero-md></main>
   </body>
 </html>
-<script></script>
+<script>
+  document.querySelector(".link").addEventListener("click", function (e) {
+    if (e.target.nodeName === "LI") {
+      document.querySelector("zero-md").setAttribute("src", "docs/" + e.target.innerText);
+    }
+  });
+</script>
